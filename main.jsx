@@ -9,7 +9,12 @@ import reducer from './model/reducers';
 import App from './components/app.jsx';
 
 // Create the Redux store with thunk middleware to enable async actions
-let createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+// TODO some kind of if development check before including redux-immutable-state-invariant
+let middleware = [ thunk ];
+if (window.location.hostname === 'localhost') {
+  middleware.push(require('redux-immutable-state-invariant')());
+}
+let createStoreWithMiddleware = applyMiddleware(...middleware)(createStore);
 let store = createStoreWithMiddleware(reducer);
 window.store = store;  // expose the store on the global object so we can view it in the console
 
