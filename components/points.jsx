@@ -2,7 +2,7 @@ import React from 'react';
 import PointsButton from './points-button.jsx';
 import noop from './noop';
 
-export default React.createClass({
+let Points = React.createClass({
 
   propTypes: {
     points: React.PropTypes.shape({
@@ -36,3 +36,6 @@ export default React.createClass({
   },
 
 });
+
+
+export default Points;

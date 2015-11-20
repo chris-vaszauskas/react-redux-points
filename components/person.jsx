@@ -2,18 +2,12 @@ import React from 'react';
 import Points from './points.jsx';
 import { incrementPoints, decrementPoints } from '../model/actions';
 
-export default React.createClass({
+let Person = React.createClass({
 
-  propTypes: {
-    person: React.PropTypes.shape({
-      id: React.PropTypes.number,
-      name: React.PropTypes.string,
-      points: React.PropTypes.object,
-    }),
-  },
-
+  // Allows this component to access this.context.store, which is the Redux store
+  // (provided by the fact that <App /> is surrounded by <Provider /> in main.jsx)
   contextTypes: {
-    store: React.PropTypes.object,  // comes from Redux
+    store: React.PropTypes.object,
   },
 
   getDefaultProps() {
@@ -43,3 +37,6 @@ export default React.createClass({
   },
 
 });
+
+
+export default Person;

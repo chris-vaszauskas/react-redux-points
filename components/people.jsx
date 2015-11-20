@@ -1,11 +1,7 @@
 import React from 'react';
 import Person from './person.jsx';
 
-export default React.createClass({
-
-  propTypes: {
-    people: React.PropTypes.array,
-  },
+let People = React.createClass({
 
   getDefaultProps() {
     return {
@@ -17,9 +13,14 @@ export default React.createClass({
     let people = this.props.people;
     return (
       <div className="people">
-        {people.map(person => <Person key={person.id} person={person} />)}
+        {people.map(function(person) {
+          return <Person key={person.id} person={person} />;
+        })}
       </div>
     );
   },
 
 });
+
+
+export default People;

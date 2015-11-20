@@ -1,10 +1,12 @@
 import React from 'react';
 import People from './people.jsx';
 
-export default React.createClass({
+let App = React.createClass({
 
-  propTypes: {
-    people: React.PropTypes.array,
+  getDefaultProps() {
+    return {
+      people: [],
+    };
   },
 
   render() {
@@ -17,3 +19,6 @@ export default React.createClass({
   },
 
 });
+
+
+export default App;

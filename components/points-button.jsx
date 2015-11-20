@@ -1,12 +1,7 @@
 import React from 'react';
 import noop from './noop';
 
-export default React.createClass({
-
-  propTypes: {
-    inc: React.PropTypes.bool,
-    onClick: React.PropTypes.func,
-  },
+let PointsButton = React.createClass({
 
   getDefaultProps() {
     return {
@@ -22,3 +17,6 @@ export default React.createClass({
   },
 
 });
+
+
+export default PointsButton;

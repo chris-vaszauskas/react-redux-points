@@ -4,5 +4,6 @@
     "no-console": 0,
     "id-length": 0,
     "no-param-reassign": 0,
+    "react/prop-types": 0,
   }
 }
