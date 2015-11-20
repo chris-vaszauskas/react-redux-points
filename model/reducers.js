@@ -13,7 +13,7 @@ let initialState = {
     },
     {
       id: 2,
-      name: 'John Atkinson',
+      name: 'Garfield',
       points: {
         count: 50,
         updating: false,
@@ -21,7 +21,7 @@ let initialState = {
     },
     {
       id: 3,
-      name: 'Todd Allen',
+      name: 'James the 1st',
       points: {
         count: 500,
         updating: false,
