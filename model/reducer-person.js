@@ -1,4 +1,5 @@
-import { Actions, createReducer } from './actions';
+import { Actions } from './actions';
+import createReducer from './create-reducer';
 import reducePoints from './reducer-points';
 
 function reducePersonFromPointsAction(person, action) {

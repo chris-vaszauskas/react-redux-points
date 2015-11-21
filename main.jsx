@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import { createStore } from 'redux';
 import { Provider, connect } from 'react-redux';
 
-import reducer from './model/reducers';
+import reducer from './model/reducer-root';
 import initialState from './model/initial';
 import App from './components/app.jsx';
 
