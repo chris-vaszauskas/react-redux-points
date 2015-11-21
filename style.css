@@ -16,9 +16,12 @@ button {
   font-size: inherit;
 }
 
-.people {
+.app {
   text-align: left;
   display: inline-block;
+}
+
+.people {
   background: white;
 }
 
@@ -111,4 +114,9 @@ button {
 
 .points-button--dec {
   transform: rotate(180deg);
+}
+
+.others {
+  text-align: center;
+  padding: 20px 0;
 }

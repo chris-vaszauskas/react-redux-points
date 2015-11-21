@@ -28,6 +28,12 @@ let initialState = {
       },
     },
   ],
+  others: [
+    1,
+    2,
+    3,
+    4,
+  ],
 };
 
 
