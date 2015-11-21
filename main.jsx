@@ -5,9 +5,10 @@ import { createStore } from 'redux';
 import { Provider, connect } from 'react-redux';
 
 import reducer from './model/reducers';
+import initialState from './model/initial';
 import App from './components/app.jsx';
 
-let store = createStore(reducer);
+let store = createStore(reducer, initialState);
 window.store = store;  // expose the store on the global object so we can view it in the console
 
 // Connect the App instance to the Redux store. The function passed to connect() returns
