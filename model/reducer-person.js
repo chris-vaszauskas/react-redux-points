@@ -1,7 +1,7 @@
 import { Actions, createReducer } from './actions';
 import reducePoints from './reducer-points';
 
-let reducePersonFromPointsAction = function(person, action) {
+function reducePersonFromPointsAction(person, action) {
   let points = reducePoints(person.points, action);
   if (points !== person.points) {
     person = {
@@ -10,7 +10,7 @@ let reducePersonFromPointsAction = function(person, action) {
     };
   }
   return person;
-};
+}
 
 export default createReducer({
   // These three actions do the same thing from the perspective of this reducer

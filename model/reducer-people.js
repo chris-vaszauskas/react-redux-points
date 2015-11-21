@@ -1,7 +1,7 @@
 import { Actions, createReducer } from './actions';
 import reducePerson from './reducer-person';
 
-let reducePeopleFromPointsAction = function(people, action) {
+function reducePeopleFromPointsAction(people, action) {
   // Search for the person in the people array
   let id = action.id;
   let index = people.findIndex(p => p.id === id);
@@ -16,7 +16,7 @@ let reducePeopleFromPointsAction = function(people, action) {
     }
   }
   return people;
-};
+}
 
 export default createReducer({
   // These three actions do the same thing from the perspective of this reducer

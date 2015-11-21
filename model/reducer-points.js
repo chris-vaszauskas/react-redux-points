@@ -1,6 +1,6 @@
 import { Actions, createReducer } from './actions';
 
-export default createReducer({
+let reducer = createReducer({
 
   [Actions.POINTS_INCREMENT]: function(points) {
     return {
@@ -29,3 +29,6 @@ export default createReducer({
   },
 
 });
+
+
+export default reducer;

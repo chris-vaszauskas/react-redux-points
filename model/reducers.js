@@ -31,7 +31,10 @@ let initialState = {
 };
 
 
-let reduceStateFromPointsAction = function(state, action) {
+/**
+ * Redux reducer for the actions related to points.
+ */
+function reduceStateFromPointsAction(state, action) {
   // Reduce the people array
   let people = reducePeople(state.people, action);
   if (people !== state.people) {
@@ -42,8 +45,10 @@ let reduceStateFromPointsAction = function(state, action) {
     };
   }
   return state;
-};
+}
 
+
+// Create the root reducer and export it
 let rootReducer = createReducer({
   // These three actions do the same thing from the perspective of this reducer
   [Actions.POINTS_INCREMENT]: reduceStateFromPointsAction,
