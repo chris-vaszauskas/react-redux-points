@@ -4,15 +4,6 @@ import noop from './noop';
 
 let Points = React.createClass({
 
-  propTypes: {
-    points: React.PropTypes.shape({
-      count: React.PropTypes.number,
-      updating: React.PropTypes.bool,
-    }),
-    increment: React.PropTypes.func,
-    decrement: React.PropTypes.func,
-  },
-
   getDefaultProps() {
     return {
       points: {
