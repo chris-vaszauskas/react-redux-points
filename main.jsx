@@ -9,12 +9,18 @@ import initialState from './model/initial';
 import App from './components/app.jsx';
 
 let store = createStore(reducer, initialState);
-window.store = store;  // expose the store on the global object so we can view it in the console
+if (window) {
+  // Expose the store on the global object so we can view it in the console
+  window.store = store;
+}
 
 // Connect the App instance to the Redux store. The function passed to connect() returns
 // the subset of the global state that App should see. This function also has an opportunity
 // to perform arbitrary transforms on the global state, but we don't use that functionality here.
-let ConnectedApp = connect(state => state)(App);
+function identity(v) {
+  return v;
+}
+let ConnectedApp = connect(identity)(App);
 
 render(
   <Provider store={store}>

@@ -16,7 +16,9 @@ let Points = React.createClass({
   },
 
   render() {
-    let { points, increment, decrement } = this.props;
+    let points = this.props.points;
+    let increment = this.props.increment;
+    let decrement = this.props.decrement;
     return (
       <div className={'points' + (points.updating ? ' points--updating' : '')}>
         <PointsButton onClick={increment} />
