@@ -1,0 +1,1 @@
+watchify main.jsx -o main.js --debug -t [ babelify ] -v
