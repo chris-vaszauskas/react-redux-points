@@ -3,14 +3,13 @@ import { render } from 'react-dom';
 
 import { createStore, applyMiddleware } from 'redux';
 import { Provider, connect } from 'react-redux';
-import thunk from 'redux-thunk';
 
 import reducer from './model/reducers';
 import App from './components/app.jsx';
 
 // Create the Redux store with thunk middleware to enable async actions
-// TODO some kind of if development check before including redux-immutable-state-invariant
-let middleware = [ thunk ];
+// TODO some kind of "if development" check before including redux-immutable-state-invariant
+let middleware = [];
 if (window.location.hostname === 'localhost') {
   middleware.push(require('redux-immutable-state-invariant')());
 }

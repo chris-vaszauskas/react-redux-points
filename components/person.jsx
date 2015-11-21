@@ -17,13 +17,13 @@ let Person = React.createClass({
   },
 
   increment() {
-    let action = incrementPoints(this.props.person);
-    this.context.store.dispatch(action);
+    let store = this.context.store;
+    incrementPoints(store, this.props.person);
   },
 
   decrement() {
-    let action = decrementPoints(this.props.person);
-    this.context.store.dispatch(action);
+    let store = this.context.store;
+    decrementPoints(store, this.props.person);
   },
 
   render() {
