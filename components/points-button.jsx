@@ -13,7 +13,11 @@ let PointsButton = React.createClass({
   render() {
     let className = 'points-button ';
     className += this.props.inc ? 'points-button--inc' : 'points-button--dec';
-    return <button className={className} onClick={this.props.onClick}></button>;
+    return (
+      <button className={className} onClick={this.props.onClick}>
+        <span />
+      </button>
+    );
   },
 
 });

@@ -60,8 +60,8 @@ button {
 
 .points-button {
   display: inline-block;
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border: none;
   border-radius: 50%;
   background: gray;
@@ -69,29 +69,46 @@ button {
   padding: 0;
   margin: 0;
   cursor: pointer;
+  padding-top: 2px;
 }
 
 .points-button:focus {
   outline: none;
 }
 
-.points-button::before,
 .points-button::after {
   content: '';
   position: absolute;
   background: white;
-}
-
-.points-button::before {
-  top: 15px;
-  left: 6px;
-  height: 3px;
-  width: 19px;
-}
-
-.points-button--inc::after {
-  top: 6px;
-  left: 14px;
+  top: 8px;
+  left: 15px;
   height: 19px;
-  width: 3px;
+  width: 4px;
+}
+
+.points-button span {
+  position: absolute;
+  transform: rotate(45deg);
+  top: 6px;
+  left: 17px;
+}
+
+.points-button span:before,
+.points-button span:after {
+  content: '';
+  position: absolute;
+  background: white;
+  height: 4px;
+  width: 16px;
+  top: 0;
+  left: 0;
+}
+
+.points-button span:after {
+  width: 4px;
+  height: 16px;
+}
+
+.points-button--dec {
+  transform: rotate(180deg);
 }
